@@ -1,0 +1,9 @@
+# 跨平台换行归一化：仓库内统一 LF，检出时按平台转换
+* text=auto eol=lf
+
+# 二进制文件不参与换行转换
+*.png binary
+*.jpg binary
+*.gguf binary
+*.safetensors binary
+*.zip binary

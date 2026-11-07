@@ -1,0 +1,26 @@
+# 下载产物与二进制（均由 scripts/ 再生，勿入库）
+runtime/
+models/
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 日志与临时文件
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 环境配置（密钥只走环境变量，不落盘）
+*.env
+.env.*
+
+# 工作区/IDE
+.workbuddy/
+.vscode/
+.idea/

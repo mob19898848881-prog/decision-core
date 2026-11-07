@@ -1,0 +1,10 @@
+# 衡决决策输出语法（GBNF）：llama-server --grammar-file configs/gbnf_decision.gbnf
+# 作用：把模型输出约束为协议 JSON——选项外幻觉=0（对标 Jev 的结构化保证）
+root   ::= decision-object
+decision-object ::= "{" ws "\"decision\":" ws string ws "," ws "\"choice\":" ws string ws "," ws "\"score\":" ws number ws "," ws "\"confidence\":" ws number ws "," ws "\"premise_flags\":" ws array-string ws "," ws "\"evidence\":" ws array-string ws "," ws "\"cost\":" ws string ws "," ws "\"rollback\":" ws string ws "," ws "\"missing\":" ws array-string ws "," ws "\"sources\":" ws array-string ws "," ws "\"falsifiable\":" ws falsifiable-object ws "," ws "\"proposal_only\":" ws boolean ws "," ws "\"adjudication\":" ws string ws "}" ws
+falsifiable-object ::= "{" ws "\"deadline\":" ws string ws "," ws "\"metric\":" ws string ws "}" ws
+array-string ::= "[" ws (string ("," ws string)*)? "]" ws
+string ::= "\"" ([^"\\] | "\\" .)* "\""
+number ::= [0-9]+ ("." [0-9]+)?
+boolean ::= "true" | "false"
+ws ::= [ \t\n\r]*

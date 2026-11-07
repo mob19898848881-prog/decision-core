@@ -1,0 +1,11 @@
+# 衡决·Decision Core 训练环境依赖（Python 3.10+）
+# 注意：torch 必须走官方 CUDA 12.x index 安装（Pascal sm_61 需要；CUDA 13 已弃 Pascal）：
+#   pip install torch --index-url https://download.pytorch.org/whl/cu126
+# Windows 一键安装：powershell -ExecutionPolicy Bypass -File scripts\setup_train_env.ps1
+torch>=2.6
+transformers>=5.0
+peft>=0.13
+bitsandbytes>=0.45
+accelerate>=1.0
+sentencepiece>=0.2
+safetensors>=0.4

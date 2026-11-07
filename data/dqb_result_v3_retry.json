@@ -1,0 +1,18 @@
+{
+  "n": 66,
+  "choice_accuracy": 0.7833,
+  "premise_audit_cov": 0.803,
+  "falsifiable_rate": 0.8636,
+  "adjudication_ok": 0.8636,
+  "defect_reject_rate": 0.5,
+  "latency_p50": 14.99,
+  "latency_p95": 28.81,
+  "targets": {
+    "choice_accuracy": 0.8,
+    "premise_audit_cov": 1.0,
+    "falsifiable_rate": 0.95,
+    "adjudication_ok": 1.0,
+    "latency_p50": 1.5
+  },
+  "DQB_PASS": false
+}

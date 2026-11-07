@@ -1,0 +1,19 @@
+{
+  "n": 66,
+  "choice_accuracy": 0.45,
+  "premise_audit_cov": 0.5606,
+  "falsifiable_rate": 0.4242,
+  "adjudication_ok": 0.303,
+  "defect_reject_rate": 0.5,
+  "mode": "cpu-validation",
+  "latency_p50": 19.941,
+  "latency_p95": 38.101,
+  "targets": {
+    "choice_accuracy": 0.8,
+    "premise_audit_cov": 1.0,
+    "falsifiable_rate": 0.95,
+    "adjudication_ok": 1.0,
+    "latency_p50": 1.5
+  },
+  "QUALITY_PASS_CPU": false
+}

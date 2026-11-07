@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "kernel": "价值度量权必须回归价值创造者本人",
+  "endpoints": {
+    "fast": {
+      "base_url": "http://127.0.0.1:8081",
+      "model": "hengjue-fast",
+      "temperature": 0.2,
+      "max_tokens": 550,
+      "timeout": 45
+    },
+    "deep": {
+      "base_url": "http://127.0.0.1:8082",
+      "model": "hengjue-deep",
+      "temperature": 0.3,
+      "max_tokens": 700,
+      "timeout": 90
+    }
+  },
+  "sampling": {
+    "fast": {"temperature": 0.2, "top_p": 0.9, "repeat_penalty": 1.1},
+    "deep": {"temperature": 0.3, "top_p": 0.95, "repeat_penalty": 1.1}
+  },
+  "gates": {
+    "retry_max": 1,
+    "premise_overlap_min": 0.3,
+    "transport_retry": 3,
+    "transport_backoff": 1.0,
+    "parse_token_escalation": 1.5,
+    "parse_token_cap": 1024
+  },
+  "ledger_path": "data/decisions.jsonl"
+}
